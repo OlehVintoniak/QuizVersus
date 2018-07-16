@@ -1,4 +1,5 @@
-﻿using QuizVersus.Core.Models;
+﻿using Newtonsoft.Json;
+using QuizVersus.Core.Models;
 using QuizVersus.Core.Models.Account;
 using QuizVersus.Core.Services.Abstract;
 using QuizVersus.Models.Account;
@@ -6,7 +7,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace QuizVersus.Core.Services
 {
@@ -14,7 +14,7 @@ namespace QuizVersus.Core.Services
     {
         public AccountService() : base("Account") { }
 
-        public async Task<int> Register(RegisterModel model)
+        public async Task<bool> Register(RegisterModel model)
         {
             var json = JsonConvert.SerializeObject(model);
 
@@ -26,9 +26,9 @@ namespace QuizVersus.Core.Services
             {
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    return 0;
+                    return true;
                 }
-                return 1;
+                return false;
             }
         }
 
@@ -53,26 +53,5 @@ namespace QuizVersus.Core.Services
             }
             return false;
         }
-
-        public async Task<List<FakePost>> GetFakePosts()
-        {
-            List<FakePost> responseModel;
-            var http = Http();
-            using (http)
-            using (var response = await http.GetAsync("https://jsonplaceholder.typicode.com/posts"))
-            {
-                var result = await response.Content.ReadAsStringAsync();
-                responseModel = JsonConvert.DeserializeObject<List<FakePost>>(result);
-            }
-            return responseModel;
-        }
-
-    }
-    public class FakePost
-    {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
     }
 }
