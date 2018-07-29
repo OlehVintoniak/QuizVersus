@@ -4,6 +4,8 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using QuizVersus.Core.Services;
+using QuizVersus.Fragments;
 
 namespace QuizVersus
 {
@@ -11,21 +13,10 @@ namespace QuizVersus
     public class MainActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         private TextView _textMessage;
-
+        private QuizService _quizService = new QuizService();
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
-            {
-                case Resource.Id.navigation_home:
-                    _textMessage.SetText(Resource.String.title_home);
-                    return true;
-                case Resource.Id.navigation_dashboard:
-                    _textMessage.SetText(Resource.String.title_dashboard);
-                    return true;
-                case Resource.Id.navigation_notifications:
-                    _textMessage.SetText(Resource.String.title_notifications);
-                    return true;
-            }
+            LoadFragment(item.ItemId);
             return false;
         }
 
@@ -37,6 +28,50 @@ namespace QuizVersus
             _textMessage = FindViewById<TextView>(Resource.Id.message);
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.SetOnNavigationItemSelectedListener(this);
+        }
+
+        void LoadFragment(int id)
+        {
+            Android.Support.V4.App.Fragment fragment = null;
+            switch (id)
+            {
+                case Resource.Id.navigation_sended:
+                    {
+                        RunOnUiThread(async () =>
+                        {
+                            var sendedQuizes = await _quizService.GetSended();
+
+                            fragment = new SendedQuizesFragment(sendedQuizes);
+
+                            SupportFragmentManager.BeginTransaction()
+                                .Replace(Resource.Id.fragmentContainer, fragment)
+                                .Commit();
+                        });
+                        break;
+                    }
+                case Resource.Id.navigation_quick:
+                    {
+                        RunOnUiThread(async () =>
+                        {
+                            var res = await _quizService.SendQuickQuiz();
+                        });
+                        break;
+                    }
+                case Resource.Id.navigation_received:
+                    {
+                        RunOnUiThread(async () =>
+                        {
+                            var receivedQuizes = await _quizService.GetRecived();
+
+                            fragment = new ReceivedQuizesFragment(receivedQuizes);
+                            
+                            SupportFragmentManager.BeginTransaction()
+                                .Replace(Resource.Id.fragmentContainer, fragment)
+                                .Commit();
+                        });
+                        break;
+                    }
+            }
         }
     }
 }

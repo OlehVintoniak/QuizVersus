@@ -23,6 +23,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="admin@gmail.com"
         android:id="@+id/LoginTextView" />
     <TextView
         android:text="Password"
@@ -34,6 +35,7 @@
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="1z1z1z"
         android:id="@+id/PasswordTextView" />
     <Button
         android:text="Login"

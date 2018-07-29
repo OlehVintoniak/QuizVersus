@@ -2345,26 +2345,26 @@ namespace QuizVersus
 			// aapt resource value: 0x7f080033
 			public const int CTRL = 2131230771;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int ConfirmPasswordTextView = 2131230899;
+			// aapt resource value: 0x7f0800b6
+			public const int ConfirmPasswordTextView = 2131230902;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int EmailTextView = 2131230898;
+			// aapt resource value: 0x7f0800b5
+			public const int EmailTextView = 2131230901;
 			
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int FirstNameTextView = 2131230900;
-			
 			// aapt resource value: 0x7f0800b7
-			public const int GoToLoginButton = 2131230903;
+			public const int FirstNameTextView = 2131230903;
+			
+			// aapt resource value: 0x7f0800ba
+			public const int GoToLoginButton = 2131230906;
 			
 			// aapt resource value: 0x7f08009e
 			public const int GoToRegistrationButton = 2131230878;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int LastNameTextView = 2131230901;
+			// aapt resource value: 0x7f0800b8
+			public const int LastNameTextView = 2131230904;
 			
 			// aapt resource value: 0x7f08009d
 			public const int LoginButton = 2131230877;
@@ -2378,8 +2378,8 @@ namespace QuizVersus
 			// aapt resource value: 0x7f08009c
 			public const int PasswordTextView = 2131230876;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int RegistrationButton = 2131230902;
+			// aapt resource value: 0x7f0800b9
+			public const int RegistrationButton = 2131230905;
 			
 			// aapt resource value: 0x7f080036
 			public const int SHIFT = 2131230774;
@@ -2582,6 +2582,9 @@ namespace QuizVersus
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
+			// aapt resource value: 0x7f08008c
+			public const int fragmentContainer = 2131230860;
+			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
@@ -2630,14 +2633,14 @@ namespace QuizVersus
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int masked = 2131230905;
+			// aapt resource value: 0x7f0800bf
+			public const int masked = 2131230911;
 			
 			// aapt resource value: 0x7f0800a5
 			public const int media_actions = 2131230885;
 			
-			// aapt resource value: 0x7f08008c
-			public const int message = 2131230860;
+			// aapt resource value: 0x7f0800bd
+			public const int message = 2131230909;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2651,17 +2654,17 @@ namespace QuizVersus
 			// aapt resource value: 0x7f08008d
 			public const int navigation = 2131230861;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int navigation_dashboard = 2131230907;
-			
 			// aapt resource value: 0x7f080095
 			public const int navigation_header_container = 2131230869;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int navigation_home = 2131230906;
+			// aapt resource value: 0x7f0800c1
+			public const int navigation_quick = 2131230913;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int navigation_notifications = 2131230908;
+			// aapt resource value: 0x7f0800c2
+			public const int navigation_received = 2131230914;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int navigation_sended = 2131230912;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -2699,8 +2702,17 @@ namespace QuizVersus
 			// aapt resource value: 0x7f080007
 			public const int progress_horizontal = 2131230727;
 			
+			// aapt resource value: 0x7f0800b4
+			public const int quizesCount = 2131230900;
+			
 			// aapt resource value: 0x7f080075
 			public const int radio = 2131230837;
+			
+			// aapt resource value: 0x7f0800b2
+			public const int receivedQuizesListView = 2131230898;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int receiverNameTextView = 2131230908;
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
@@ -2770,6 +2782,12 @@ namespace QuizVersus
 			
 			// aapt resource value: 0x7f08008a
 			public const int select_dialog_listview = 2131230858;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int sendedQuizesListView = 2131230907;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int senderNameTextView = 2131230899;
 			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
@@ -2897,8 +2915,8 @@ namespace QuizVersus
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int visible = 2131230904;
+			// aapt resource value: 0x7f0800be
+			public const int visible = 2131230910;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3134,22 +3152,34 @@ namespace QuizVersus
 			public const int notification_template_part_time = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int RegistrationActivity = 2130968633;
+			public const int ReceivedQuizesListFargment = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_item_material = 2130968634;
+			public const int ReceivedQuizesRowView = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int select_dialog_multichoice_material = 2130968635;
+			public const int RegistrationActivity = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int select_dialog_singlechoice_material = 2130968636;
+			public const int select_dialog_item_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int support_simple_spinner_dropdown_item = 2130968637;
+			public const int select_dialog_multichoice_material = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int tooltip = 2130968638;
+			public const int select_dialog_singlechoice_material = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int SendedQuizesListFragment = 2130968639;
+			
+			// aapt resource value: 0x7f040040
+			public const int SendedQuizesRowView = 2130968640;
+			
+			// aapt resource value: 0x7f040041
+			public const int support_simple_spinner_dropdown_item = 2130968641;
+			
+			// aapt resource value: 0x7f040042
+			public const int tooltip = 2130968642;
 			
 			static Layout()
 			{
@@ -3300,6 +3330,15 @@ namespace QuizVersus
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
+			
+			// aapt resource value: 0x7f09002d
+			public const int menu_quick_quiz = 2131296301;
+			
+			// aapt resource value: 0x7f09002c
+			public const int menu_received_quizes = 2131296300;
+			
+			// aapt resource value: 0x7f09002b
+			public const int menu_sended_quizes = 2131296299;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;

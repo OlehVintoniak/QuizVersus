@@ -55,6 +55,12 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\ReceivedQuizesListAdapter.cs" />
+    <Compile Include="Adapters\SendedQuizesListAdapter.cs" />
+    <Compile Include="Fragments\ReceivedQuizesBaseListFragment.cs" />
+    <Compile Include="Fragments\ReceivedQuizesFragment.cs" />
+    <Compile Include="Fragments\SendedQuizesBaseListFragment.cs" />
+    <Compile Include="Fragments\SendedQuizesFragment.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="RegistrationAvtivity.cs" />
@@ -115,6 +121,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\RegistrationActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SendedQuizesRowView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SendedQuizesListFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ReceivedQuizesRowView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ReceivedQuizesListFargment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
