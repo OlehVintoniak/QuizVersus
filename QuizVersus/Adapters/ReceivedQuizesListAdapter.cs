@@ -37,7 +37,11 @@ namespace QuizVersus.Adapters
             }
 
             convertView.FindViewById<TextView>(Resource.Id.senderNameTextView).Text = item.SenderFullName;
-            convertView.FindViewById<TextView>(Resource.Id.quizesCount).Text = item.QuestionCount.ToString();
+            convertView.FindViewById<TextView>(Resource.Id.questionsCount).Text = item.QuestionCount.ToString();
+            convertView.FindViewById<TextView>(Resource.Id.receiverResult).Text =
+                item.ReciverResult.HasValue ? item.ReciverResult.ToString() : "0";
+            convertView.FindViewById<TextView>(Resource.Id.senderResult).Text =
+                item.SenderResult.HasValue ? item.SenderResult.ToString() : "0";
             return convertView;
         }
     }

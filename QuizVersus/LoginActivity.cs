@@ -51,12 +51,14 @@ namespace QuizVersus
             {
                 RunOnUiThread(async () =>
                 {
+                    var progressDialog = ProgressDialog.Show(this, "Please wait...", "Checking account info...", true);
                     var loginResult = await _accountService.LogIn(new LoginModel
                     {
                         Email = email, Password = password
                     });
                     if (loginResult)
                     {
+                        progressDialog.Hide();
                         Intent intent = new Intent(this, typeof(MainActivity));
                         StartActivity(intent);
                     }

@@ -66,9 +66,11 @@ namespace QuizVersus
             {
                 RunOnUiThread(async () =>
                 {
+                    var progressDialog = ProgressDialog.Show(this, "Please wait...", "Checking account info...", true);
                     var registerResult = await _accountService.Register(registerModel);
                     if (registerResult)
                     {
+                        progressDialog.Hide();
                         Intent intent = new Intent(this, typeof(LoginActivity));
                         StartActivity(intent);
                     }

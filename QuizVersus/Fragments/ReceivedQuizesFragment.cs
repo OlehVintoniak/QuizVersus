@@ -23,7 +23,6 @@ namespace QuizVersus.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            //return LayoutInflater.From(Context).Inflate(Resource.Layout.ReceivedQuizesListFargment, container);
             return inflater.Inflate(Resource.Layout.ReceivedQuizesListFargment, container, false);
         }
     }

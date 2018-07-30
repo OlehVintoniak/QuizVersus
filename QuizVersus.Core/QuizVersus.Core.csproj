@@ -42,6 +42,7 @@
     <Compile Include="Models\EntireQuiz.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\QuizSimple.cs" />
+    <Compile Include="Models\Quiz\CommitedQuiz.cs" />
     <Compile Include="Models\StaticFields.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Abstract\BaseHttpService.cs" />

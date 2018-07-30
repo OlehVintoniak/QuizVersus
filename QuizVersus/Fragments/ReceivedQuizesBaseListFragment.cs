@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Android.Content;
 using Android.Widget;
 using QuizVersus.Core.Models;
 
@@ -17,7 +18,17 @@ namespace QuizVersus.Fragments
         private void ReceivedQuizesListViewItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var selectedQuiz = receivedQuizes[e.Position];
-            //Todo: go to quiz passing if not passed.
+            if (!selectedQuiz.ReciverResult.HasValue)
+            {
+                var intent = new Intent();
+                intent.SetClass(this.Activity, typeof(QuizPassingActivity));
+                intent.PutExtra("selectedQuizId", selectedQuiz.Id);
+                StartActivity(intent);
+            }
+            else
+            {
+                Toast.MakeText(this.Activity, "Quiz has beed already finished", ToastLength.Short).Show();
+            }
         }
 
         protected void FindViews()

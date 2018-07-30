@@ -4,22 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Sender:"
+        android:text="Questions:"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="14dp" />
     <TextView
-        android:id="@+id/senderNameTextView"
+        android:id="@+id/questionsCount"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16dp" />
     <TextView
-        android:text="questions:"
+        android:text="You : "
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textSize="14dp" />
+        android:textSize="16dp" />
     <TextView
-        android:id="@+id/quizesCount"
+        android:id="@+id/receiverResult"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16dp" />
+    <TextView
+        android:text=" : "
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/senderResult"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/senderNameTextView"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="16dp" />

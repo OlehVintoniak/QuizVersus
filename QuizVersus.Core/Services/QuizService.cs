@@ -4,7 +4,9 @@ using QuizVersus.Core.Services.Abstract;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
+using QuizVersus.Core.Models.Quiz;
 
 namespace QuizVersus.Core.Services
 {
@@ -49,6 +51,37 @@ namespace QuizVersus.Core.Services
                 responseModel = JsonConvert.DeserializeObject<EntireQuiz>(result);
             }
             return responseModel;
+        }
+
+        public async Task<EntireQuiz> GetEntireQuizById(int id)
+        {
+            EntireQuiz responseModel;
+            var http = HttpWithToken();
+            using (http)
+            using (var response = await http.GetAsync(EntireUrl($"Passage/{id}")))
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                responseModel = JsonConvert.DeserializeObject<EntireQuiz>(result);
+            }
+            return responseModel;
+        }
+
+        public async Task<bool> ReceiverCommit(CommitedQuiz quiz)
+        {
+            var json = JsonConvert.SerializeObject(quiz);
+
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var http = HttpWithToken();
+            using (http)
+            using (var response = await http.PostAsync(EntireUrl("ReceiverCommit"), content))
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    return true;
+                }
+                return false;
+            }
         }
 
         private HttpClient HttpWithToken()
